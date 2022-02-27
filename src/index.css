@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #EEE;
+  --secondary-color: #000;
+  --bg-color: #EEE;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #FBFBFB;
+}
+
+/* General */
+.container {
+  max-width: 1100px;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  margin: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+}
+
+/* Form */
+.form-control {
+  width: 100%;
+  padding: 2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin-top: 1.8rem;
+}
+
+.submit-input {
+  margin-top: 2rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-input:hover {
+  opacity: 0.8;
+}
+
+/* List */
+.list {
+  margin-top: 2rem;
+  padding: 2rem;
+  list-style-type: none;
+  background-color: var(--bg-color);
+}
+
+.list-item-content {
+  padding: 1.8rem;
+  margin-top: 1rem;
+  background-color: #FFF;
+}
+
+.list-title {
+  text-align: center;
+  margin-top: 1.8rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.list-body {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.list-btns {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Modal */
+.modal {
+  position: absolute;
+  max-width: 600px;
+  max-height: 600px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.modal span {
+  display: block;
+  margin-left: auto;
+  text-align: right;
+  color: #FF0000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal h1 {
+  color: var(--primary-color);
+}
+
+.modal span:hover{
+  opacity: 0.6;
+}
+
+/* Utility */
+button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+
+/* Desktop view */
+@media (min-width: 600px) {
+  .list-content {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+}
